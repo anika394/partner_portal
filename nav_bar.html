@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="word-css.css">
+</head>
+<body>
+
+<header class="page_header">Our Digital Journey ˅ &nbsp&nbsp Guidelines ˅ &nbsp&nbsp Products ˅ &nbsp&nbsp SG Tech Stack ˅ &nbsp&nbsp Communities ˅ &nbsp&nbsp <strong><u>Partnerships ˅</u></strong></header>
+
+<table width="90%" cellspacing="40">
+    <td width="25%" valign="top">
+        <br>
+        <div id="nav_bar">
+            <button class="accordion">Getting Started to Government Procurement ↓</button>
+            <div class="panel">
+                <a href="partnerships/getting-started-to-government-procurement/introduction.html">Introduction</a>
+                <a href="partnerships/getting-started-to-government-procurement/procurement-approaches.html">Procurement Approaches</a>
+                <a href="partnerships/getting-started-to-government-procurement/gebiz-portal.html">GeBIZ Portal</a>
+                <a href="partnerships/getting-started-to-government-procurement/gebiz-trading-partner-registration.html">GeBIZ Trading Partner Registration</a>
+                <a href="partnerships/getting-started-to-government-procurement/how-to-bid.html">How to Bid</a>
+            </div>
+            <button class="accordion">Additional Resources ↓</button>
+            <div class="panel">
+                <a href="partnerships/additional-resources/accreditation-and-upskilling-resources.html">Accreditation and Upskilling Resources</a>
+                <a href="partnerships/additional-resources/upcoming-initiatives.html">Upcoming Initiatives</a>
+            </div>
+            <button class="accordion" onclick="window.location.href='partnerships/success-stories.html'">Success Stories</button>
+        </div>
+        <script src="accordion.js"></script>
+   </td>
+    <td width="20%" valign=top>
+        <h3>Hello, welcome to a HTML mockup of the Partner Portal</h3>
+        <p>← &nbsp&nbsp Use the navigation bar to explore the structure of the Partner Portal.</p>
+        <p>Content will be continuously updated and revised based on upcoming meetings with suppliers and feeback, this is just to show how the portal will be structured!</p>
+    </td>
+
+<td width="40%">
+<h3>Alternate Navigation Layouts</h3>
+    <table><tr><td style="border: 1px solid #d3d3d3; padding-top: 10px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px;"><div>
+    <h4><i>Content Recommender System</i></h4>
+    <p class="navigation_sub_sub" style="text-indent: 0px;"><i>This is an example of how we could better suggest information to users based on the information they give us:</i></p>
+    <form id="redirectForm">
+            <label for="experience">I have</label>
+            <select id="experience">
+                <option value="not_worked">never worked with government</option>
+                <option value="have_worked">worked with government before</option>
+            </select>
+            
+            <label for="want"> and I am interested in</label>
+            <select id="want">
+                <option value="learn_more">learning about procurement</option>
+                <option value="upskill">becoming a more competitive bidder</option>
+                <option value="upcoming_initiatives">keeping up to date with procurement initiatives</option>
+                <option value="success_stories">reading some case studies</option>
+            </select>
+            
+            <button type="button" style="background-color: #87CEFA;" onclick="redirectToLink()">Go</button>
+        </form>
+
+        <script>
+            function redirectToLink() {
+                var experience = document.getElementById('experience').value;
+                var want = document.getElementById('want').value;
+
+                var url = 'partnerships/getting-started-to-government-procurement/introduction.html';
+                if (experience === 'not_worked' && want === 'learn_more') {
+                    url = 'partnerships/getting-started-to-government-procurement/introduction.html';
+                } else if (experience === 'have_worked' && want === 'learn_more') {
+                    url = 'partnerships/getting-started-to-government-procurement/procurement-approaches.html';
+                } else if (want === 'upskill') {
+                    url = 'partnerships/additional-resources/accreditation-and-upskilling-resources.html';
+                } else if (want === 'upcoming_initiatives') {
+                    url = 'partnerships/additional-resources/upcoming-initiatives.html';
+                } else if (want === 'success_stories') {
+                    url = 'partnerships/success-stories.html';
+                } else {
+                    url = 'partnerships/getting-started-to-government-procurement/introduction.html';
+                }
+
+                window.location.href = url;
+            }
+        </script>
+    </div></td></tr></table>
+
+    <table><tr><td style="border: 1px solid #d3d3d3; padding-top: 10px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px;">
+        <div>
+            <h4><i>Information by Procurement Stage/Experience</i></h4>
+            <p class="navigation_sub_sub" style="text-indent: 0px;"><i>This is an example of how we could suggest information based on the stage of procurement the user is interested in:</i></p>
+
+            <button class="stage_layout" style="width: 100%; text-align: left;" type="button" onclick="window.location.href='partnerships/getting-started-to-government-procurement/introduction.html'"><strong>&nbsp&nbsp1 &nbsp&nbsp&nbsp</strong> Learn about how Government Procurement works</button>
+
+            <button class="stage_layout" style="width: 100%; text-align: left;" type="button" onclick="window.location.href='partnerships/getting-started-to-government-procurement/gebiz-trading-partner-registration.html'"><strong>&nbsp&nbsp2 &nbsp&nbsp&nbsp</strong> Set up a GeBIZ account</button>
+
+            <button class="stage_layout" style="width: 100%; text-align: left;" type="button" onclick="window.location.href='partnerships/getting-started-to-government-procurement/procurement-approaches.html'"><strong>&nbsp&nbsp3 &nbsp&nbsp&nbsp</strong> Procurement types and what to expect</button>
+
+            <button class="stage_layout" style="width: 100%; text-align: left;" type="button" onclick="window.location.href='partnerships/getting-started-to-government-procurement/how-to-bid.html'"><strong>&nbsp&nbsp4 &nbsp&nbsp&nbsp</strong> Search and bid for a tender</button>
+
+            <button class="stage_layout" style="width: 100%; text-align: left;" type="button" onclick="window.location.href='partnerships/additional-resources/accreditation-and-upskilling-resources.html'"><strong>&nbsp&nbsp5 &nbsp&nbsp&nbsp</strong> Increase my competitiveness and capabilities</button>
+        </div>
+    </td></tr></table>
+</td>
+</table>
+</body>
